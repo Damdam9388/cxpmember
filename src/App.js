@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./Nav";
+import React, { Component } from "react";
+import './index.scss';
+//...
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: []
+    };
+  }
+
+  render = () => {
+    return (
+      <>
+        <div className="App">
+          <header className="App-header">
+            <div className="jumbotron">
+              <h1 className="display-4">Welcome On Board!</h1>
+              <p className="lead">Bienvenue dans votre gestionnaire de contacts professionnel.</p>
+              <hr className="my-4" />
+              <p>L'outil indispensable pour gérer vos contacts.</p>
+              <a className="btn btn-primary btn-lg" href="/" role="button">Learn more</a>
+            </div>
+          </header>
+          <Nav />
+          <div className="row">
+            <div className="col p-2">
+              <h1>Contacts</h1>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
 }
 
 export default App;

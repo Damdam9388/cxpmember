@@ -1,3 +1,6 @@
+// '~' désigne le dossier node_modules
+@import "~bootstrap/scss/bootstrap";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,7 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.jumbotron {
+  margin-top: 20px;
+  background-image: url("Img/header.jpg");
+  background-size: cover;
+  color: white;
 }
